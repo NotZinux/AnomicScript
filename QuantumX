@@ -1,0 +1,802 @@
+--[[
+
+
+ _____ ______   ________  ________  _______           ________      ___    ___             ________  ___  ________   ___  ___     ___    ___ 
+|\   _ \  _   \|\   __  \|\   ___ \|\  ___ \         |\   __  \    |\  \  /  /|___        |\_____  \|\  \|\   ___  \|\  \|\  \   |\  \  /  /|
+\ \  \\\__\ \  \ \  \|\  \ \  \_|\ \ \   __/|        \ \  \|\ /_   \ \  \/  / /\__\        \|___/  /\ \  \ \  \\ \  \ \  \\\  \  \ \  \/  / /
+ \ \  \\|__| \  \ \   __  \ \  \ \\ \ \  \_|/__       \ \   __  \   \ \    / /\|__|            /  / /\ \  \ \  \\ \  \ \  \\\  \  \ \    / / 
+  \ \  \    \ \  \ \  \ \  \ \  \_\\ \ \  \_|\ \       \ \  \|\  \   \/  /  /     ___         /  /_/__\ \  \ \  \\ \  \ \  \\\  \  /     \/  
+   \ \__\    \ \__\ \__\ \__\ \_______\ \_______\       \ \_______\__/  / /      |\__\       |\________\ \__\ \__\\ \__\ \_______\/  /\   \  
+    \|__|     \|__|\|__|\|__|\|_______|\|_______|        \|_______|\___/ /       \|__|        \|_______|\|__|\|__| \|__|\|_______/__/ /\ __\ 
+                                                                  \|___|/                                                        |__|/ \|__| 
+                                                                                                                                             
+                                                                                                                                             
+
+
+
+--]]
+
+local AnomicScript = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local SpawnFrame = Instance.new("Frame")
+local GoToSpawnLocation = Instance.new("TextButton")
+local Frame_4 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local EspFrame = Instance.new("Frame")
+local Frame_5 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local GunEsp = Instance.new("TextButton")
+local PrinterEsp = Instance.new("TextButton")
+local Player_Configure = Instance.new("Frame")
+local Frame_6 = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local IncreasePlayerHitbox = Instance.new("TextButton")
+local Input = Instance.new("TextBox")
+local Local_Player_Configuration = Instance.new("Frame")
+local Frame_7 = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local PlayerTPWalkspeed = Instance.new("TextButton")
+local Input_2 = Instance.new("TextBox")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local TextLabel_11 = Instance.new("TextLabel")
+
+--Properties:
+
+AnomicScript.Name = "Anomic Script"
+AnomicScript.Parent = game.CoreGui
+AnomicScript.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = AnomicScript
+Frame.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.246052638, 0, 0.291322321, 0)
+Frame.Size = UDim2.new(0, 469, 0, 25)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0.975257576, 0)
+Frame_2.Size = UDim2.new(0, 469, 0, 251)
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Frame_3.BorderColor3 = Color3.fromRGB(202, 202, 202)
+Frame_3.Position = UDim2.new(0.0362473354, 0, 2.60426021, 0)
+Frame_3.Size = UDim2.new(0, 434, 0, 184)
+
+TextLabel.Parent = Frame_3
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 434, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Scripts"
+TextLabel.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel.TextSize = 14.000
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+
+ScrollingFrame.Parent = Frame_3
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(7.03170002e-08, 0, -0.00543478271, 0)
+ScrollingFrame.Size = UDim2.new(0, 434, 0, 185)
+
+SpawnFrame.Name = "SpawnFrame"
+SpawnFrame.Parent = ScrollingFrame
+SpawnFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+SpawnFrame.BackgroundTransparency = 0.500
+SpawnFrame.BorderColor3 = Color3.fromRGB(200, 200, 200)
+SpawnFrame.Position = UDim2.new(0.0184331797, 0, 0.0686383247, 0)
+SpawnFrame.Size = UDim2.new(0, 224, 0, 146)
+
+GoToSpawnLocation.Name = "GoTo SpawnLocation"
+GoToSpawnLocation.Parent = SpawnFrame
+GoToSpawnLocation.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+GoToSpawnLocation.BackgroundTransparency = 0.600
+GoToSpawnLocation.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GoToSpawnLocation.BorderSizePixel = 0
+GoToSpawnLocation.Position = UDim2.new(0.0185707193, 0, 0.127433777, 0)
+GoToSpawnLocation.Size = UDim2.new(0, 136, 0, 26)
+GoToSpawnLocation.Modal = true
+GoToSpawnLocation.Font = Enum.Font.SourceSans
+GoToSpawnLocation.Text = "GoTo SpawnLocation"
+GoToSpawnLocation.TextColor3 = Color3.fromRGB(255, 255, 255)
+GoToSpawnLocation.TextSize = 14.000
+
+Frame_4.Parent = SpawnFrame
+Frame_4.BackgroundColor3 = Color3.fromRGB(200, 192, 183)
+Frame_4.BackgroundTransparency = 0.300
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Size = UDim2.new(0, 224, 0, 12)
+
+TextLabel_2.Parent = Frame_4
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Size = UDim2.new(0, 200, 0, 12)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Spawn"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+EspFrame.Name = "EspFrame"
+EspFrame.Parent = ScrollingFrame
+EspFrame.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+EspFrame.BackgroundTransparency = 0.500
+EspFrame.BorderColor3 = Color3.fromRGB(200, 200, 200)
+EspFrame.Position = UDim2.new(0.55529952, 0, 0.0676050112, 0)
+EspFrame.Size = UDim2.new(0, 162, 0, 146)
+
+Frame_5.Parent = EspFrame
+Frame_5.BackgroundColor3 = Color3.fromRGB(200, 192, 183)
+Frame_5.BackgroundTransparency = 0.300
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Size = UDim2.new(0, 162, 0, 12)
+
+TextLabel_3.Parent = Frame_5
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Size = UDim2.new(0, 162, 0, 12)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Esp"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+GunEsp.Name = "Gun Esp"
+GunEsp.Parent = Frame_5
+GunEsp.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+GunEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GunEsp.BorderSizePixel = 0
+GunEsp.Position = UDim2.new(0.0552922003, 0, 3.97533154, 0)
+GunEsp.Size = UDim2.new(0, 144, 0, 26)
+GunEsp.Font = Enum.Font.SourceSans
+GunEsp.Text = "Gun Esp"
+GunEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
+GunEsp.TextSize = 14.000
+
+PrinterEsp.Name = "Printer Esp"
+PrinterEsp.Parent = Frame_5
+PrinterEsp.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+PrinterEsp.BackgroundTransparency = 0.600
+PrinterEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PrinterEsp.BorderSizePixel = 0
+PrinterEsp.Position = UDim2.new(0.0671115443, 0, 1.55866492, 0)
+PrinterEsp.Size = UDim2.new(0, 136, 0, 26)
+PrinterEsp.Modal = true
+PrinterEsp.Font = Enum.Font.SourceSans
+PrinterEsp.Text = "Printer Esp"
+PrinterEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
+PrinterEsp.TextSize = 14.000
+
+Player_Configure.Name = "Player_Configure"
+Player_Configure.Parent = ScrollingFrame
+Player_Configure.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Player_Configure.BackgroundTransparency = 0.500
+Player_Configure.BorderColor3 = Color3.fromRGB(200, 200, 200)
+Player_Configure.Position = UDim2.new(0.0184331797, 0, 0.496641248, 0)
+Player_Configure.Size = UDim2.new(0, 162, 0, 146)
+
+Frame_6.Parent = Player_Configure
+Frame_6.BackgroundColor3 = Color3.fromRGB(200, 192, 183)
+Frame_6.BackgroundTransparency = 0.300
+Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_6.BorderSizePixel = 0
+Frame_6.Size = UDim2.new(0, 162, 0, 12)
+
+TextLabel_4.Parent = Frame_6
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Size = UDim2.new(0, 162, 0, 12)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Player's Configuration"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+
+IncreasePlayerHitbox.Name = "Increase Player Hitbox"
+IncreasePlayerHitbox.Parent = Frame_6
+IncreasePlayerHitbox.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+IncreasePlayerHitbox.BackgroundTransparency = 0.600
+IncreasePlayerHitbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+IncreasePlayerHitbox.BorderSizePixel = 0
+IncreasePlayerHitbox.Position = UDim2.new(0.0671115443, 0, 1.55866492, 0)
+IncreasePlayerHitbox.Size = UDim2.new(0, 136, 0, 26)
+IncreasePlayerHitbox.Modal = true
+IncreasePlayerHitbox.Font = Enum.Font.SourceSans
+IncreasePlayerHitbox.Text = "Increase Players Hitbox"
+IncreasePlayerHitbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+IncreasePlayerHitbox.TextSize = 14.000
+
+Input.Name = "Input"
+Input.Parent = Frame_6
+Input.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Input.BackgroundTransparency = 0.600
+Input.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Input.BorderSizePixel = 0
+Input.Position = UDim2.new(0.141975313, 0, 4, 0)
+Input.Size = UDim2.new(0, 111, 0, 23)
+Input.Font = Enum.Font.SourceSans
+Input.PlaceholderText = "Input Value Here:"
+Input.Text = ""
+Input.TextColor3 = Color3.fromRGB(0, 0, 0)
+Input.TextSize = 14.000
+
+Local_Player_Configuration.Name = "Local_Player_Configuration"
+Local_Player_Configuration.Parent = ScrollingFrame
+Local_Player_Configuration.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Local_Player_Configuration.BackgroundTransparency = 0.500
+Local_Player_Configuration.BorderColor3 = Color3.fromRGB(200, 200, 200)
+Local_Player_Configuration.Position = UDim2.new(0.405529946, 0, 0.494759381, 0)
+Local_Player_Configuration.Size = UDim2.new(0, 162, 0, 146)
+
+Frame_7.Parent = Local_Player_Configuration
+Frame_7.BackgroundColor3 = Color3.fromRGB(200, 192, 183)
+Frame_7.BackgroundTransparency = 0.300
+Frame_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_7.BorderSizePixel = 0
+Frame_7.Size = UDim2.new(0, 162, 0, 12)
+
+TextLabel_5.Parent = Frame_7
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0, 0, 0.0833333358, 0)
+TextLabel_5.Size = UDim2.new(0, 162, 0, 12)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "LocalPlayer's Configuration"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
+
+PlayerTPWalkspeed.Name = "Player TPWalkspeed"
+PlayerTPWalkspeed.Parent = Frame_7
+PlayerTPWalkspeed.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+PlayerTPWalkspeed.BackgroundTransparency = 0.600
+PlayerTPWalkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerTPWalkspeed.BorderSizePixel = 0
+PlayerTPWalkspeed.Position = UDim2.new(0.0671115443, 0, 1.55866492, 0)
+PlayerTPWalkspeed.Size = UDim2.new(0, 136, 0, 26)
+PlayerTPWalkspeed.Modal = true
+PlayerTPWalkspeed.Font = Enum.Font.SourceSans
+PlayerTPWalkspeed.Text = "Player TPWalkspeed"
+PlayerTPWalkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerTPWalkspeed.TextSize = 14.000
+
+Input_2.Name = "Input"
+Input_2.Parent = Frame_7
+Input_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Input_2.BackgroundTransparency = 0.600
+Input_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Input_2.BorderSizePixel = 0
+Input_2.Position = UDim2.new(0.141975313, 0, 4, 0)
+Input_2.Size = UDim2.new(0, 111, 0, 23)
+Input_2.Font = Enum.Font.SourceSans
+Input_2.PlaceholderText = "Input Value Here:"
+Input_2.Text = ""
+Input_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Input_2.TextSize = 14.000
+
+TextLabel_6.Parent = Frame
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Size = UDim2.new(0, 125, 0, 24)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "Quantum X | Anomic Script"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 18.000
+TextLabel_6.TextWrapped = true
+
+TextLabel_7.Parent = Frame
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.733475506, 0, 0.0399999991, 0)
+TextLabel_7.Size = UDim2.new(0, 125, 0, 24)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "v2.3"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 18.000
+TextLabel_7.TextWrapped = true
+TextLabel_7.TextXAlignment = Enum.TextXAlignment.Right
+
+TextLabel_8.Parent = Frame
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.0362473354, 0, 1.36000001, 0)
+TextLabel_8.Size = UDim2.new(0, 125, 0, 24)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "Made by: Zinux"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 18.000
+TextLabel_8.TextWrapped = true
+
+TextLabel_9.Parent = Frame
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.351812422, 0, 1.36000001, 0)
+TextLabel_9.Size = UDim2.new(0, 78, 0, 24)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "V3RMILLION Account: Zinux"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 18.000
+TextLabel_9.TextWrapped = true
+
+TextLabel_10.Parent = Frame
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0.550106704, 0, 1.36000001, 0)
+TextLabel_10.Size = UDim2.new(0, 69, 0, 24)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = "ElitePVPERS Account:NotZinux"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 18.000
+TextLabel_10.TextWrapped = true
+
+TextLabel_11.Parent = Frame
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0.733475566, 0, 1.36000001, 0)
+TextLabel_11.Size = UDim2.new(0, 69, 0, 24)
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = "UnknownCheats Account:NotZinux"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 18.000
+TextLabel_11.TextWrapped = true
+
+-- Scripts:
+
+local function DLEFPVQ_fake_script() -- GoToSpawnLocation.ButtonHoverEffect 
+	local script = Instance.new('LocalScript', GoToSpawnLocation)
+
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	
+	local originalColor = button.BackgroundColor3
+	local hoverColor = Color3.fromRGB(128, 128, 128)  -- Grey color
+	
+	local function tweenColor(targetColor)
+	    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	    local goal = {BackgroundColor3 = targetColor}
+	    local tween = TweenService:Create(button, tweenInfo, goal)
+	    tween:Play()
+	end
+	
+	button.MouseEnter:Connect(function()
+	    tweenColor(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+	    tweenColor(originalColor)
+	end)
+	
+	
+end
+coroutine.wrap(DLEFPVQ_fake_script)()
+local function UTIBETH_fake_script() -- GoToSpawnLocation.LocalScript 
+	local script = Instance.new('LocalScript', GoToSpawnLocation)
+
+	local Players = game:GetService("Players")
+	local Workspace = game:GetService("Workspace")
+	
+	 local function TPTOSPAWN()
+	    local player = Players.LocalPlayer
+	    local character = player.Character
+	    if not character then
+	        warn("Character not found")
+	        return
+	    end
+	
+	    local spawnLocation = Workspace:FindFirstChild("SpawnLocation")
+	    if not spawnLocation then
+	        warn("SpawnLocation not found")
+	        return
+	    end
+	
+	    spawnLocation.CanCollide = true
+	    character:PivotTo(spawnLocation.CFrame + Vector3.new(0, 5, 0))
+	 end
+	
+	script.Parent.MouseButton1Click:Connect(TPTOSPAWN)
+	
+end
+coroutine.wrap(UTIBETH_fake_script)()
+local function XTYOCVG_fake_script() -- GunEsp.ButtonHoverEffect 
+	local script = Instance.new('LocalScript', GunEsp)
+
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	
+	local originalColor = button.BackgroundColor3
+	local hoverColor = Color3.fromRGB(128, 128, 128)  -- Grey color
+	
+	local function tweenColor(targetColor)
+	    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	    local goal = {BackgroundColor3 = targetColor}
+	    local tween = TweenService:Create(button, tweenInfo, goal)
+	    tween:Play()
+	end
+	
+	button.MouseEnter:Connect(function()
+	    tweenColor(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+	    tweenColor(originalColor)
+	end)
+	
+	
+end
+coroutine.wrap(XTYOCVG_fake_script)()
+local function QIXUPG_fake_script() -- GunEsp.Script 
+	local script = Instance.new('Script', GunEsp)
+
+	
+	local entities = game.Workspace:FindFirstChild("Entities")
+	
+	local function createDisplay(model, toolName)
+		
+		local highlight = Instance.new("Highlight")
+		highlight.Parent = model
+		highlight.Adornee = model
+		highlight.OutlineColor = Color3.fromRGB(255, 11, 182)
+		highlight.FillTransparency = 1
+		highlight.OutlineTransparency = 0
+	
+	    local billboardGui = Instance.new("BillboardGui")
+	    billboardGui.Name = "ToolModelDisplay"
+	    billboardGui.Size = UDim2.new(0, 100, 0, 40)
+	    billboardGui.StudsOffset = Vector3.new(0, 3, 0)
+	    billboardGui.Adornee = model
+		if billboardGui.Enabled == false then
+			while true do
+			billboardGui.Enabled = true
+			end
+		end
+	
+	
+	
+	    local textLabel = Instance.new("TextLabel")
+	    textLabel.Size = UDim2.new(1, 0, 1, 0)
+	    textLabel.BackgroundTransparency = 1
+	    textLabel.Text = toolName
+	    textLabel.TextScaled = true
+	    textLabel.TextColor3 = Color3.new(1, 1, 1)
+	    textLabel.Parent = billboardGui
+	
+	    billboardGui.Parent = model
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	    if not entities then
+	        warn("Entities folder not found in Workspace")
+	        return
+	    end
+	
+	    for _, model in entities:GetChildren() do
+	        if model.Name == "ToolModel" then
+	            local toolNameValue = model:FindFirstChild("Handle") and
+	                                  model.Handle:FindFirstChild("ToolBG") and
+	                                  model.Handle.ToolBG:FindFirstChild("ToolName")
+	
+	            if toolNameValue and toolNameValue:IsA("StringValue") then
+	                -- Remove existing BillboardGui if present
+	                local existingBillboard = model:FindFirstChild("ToolModelDisplay")
+	                if existingBillboard then
+	                    existingBillboard:Destroy()
+	                end
+	
+	                createDisplay(model, toolNameValue.Value)
+	            else
+	                warn("ToolName StringValue not found for", model:GetFullName())
+	            end
+	        end
+	    end
+	end)
+	
+end
+coroutine.wrap(QIXUPG_fake_script)()
+local function ODAYC_fake_script() -- PrinterEsp.Script 
+	local script = Instance.new('Script', PrinterEsp)
+
+	
+	local Workspace = game:GetService("Workspace")
+	local E = Workspace.Entities
+	script.Parent.MouseButton1Click:Connect(function()
+	
+	local Workspace = game:GetService("Workspace")
+	local E = Workspace.Entities
+	local function createDisplay(printer)
+	    local B = Instance.new("BillboardGui")
+	    B.Name = "Printers Display"
+	    B.Parent = printer
+	    B.Adornee = printer
+	    B.Size = UDim2.new(0, 100, 0, 50)
+	    B.StudsOffset = Vector3.new(0, 2, 0)
+		B.AlwaysOnTop = true
+		B.Enabled = true
+		
+	
+	    local T = Instance.new("TextLabel")
+	    T.Parent = B
+	    T.Size = UDim2.new(1, 0, 1, 0)
+	    T.BackgroundTransparency = 1
+	    T.TextColor3 = Color3.fromRGB(255, 255, 255)
+	    T.Text = printer.Name
+	    T.TextScaled = true
+	
+	    local highlight = Instance.new("Highlight")
+	    highlight.Parent = printer
+	    highlight.Adornee = printer
+	    highlight.OutlineColor = Color3.fromRGB(99, 255, 15)
+	    highlight.FillTransparency = 1
+	    highlight.OutlineTransparency = 0
+	end
+	
+	for i, printers in pairs(E:GetChildren()) do
+		if printers.Name == "Hotwired Printer" or printers.Name == "Simple Printer" then
+			createDisplay(printers)
+			
+		end
+	end
+	
+	
+	end)
+	
+end
+coroutine.wrap(ODAYC_fake_script)()
+local function IPQN_fake_script() -- PrinterEsp.ButtonHoverEffect 
+	local script = Instance.new('LocalScript', PrinterEsp)
+
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	
+	local originalColor = button.BackgroundColor3
+	local hoverColor = Color3.fromRGB(128, 128, 128)  -- Grey color
+	
+	local function tweenColor(targetColor)
+	    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	    local goal = {BackgroundColor3 = targetColor}
+	    local tween = TweenService:Create(button, tweenInfo, goal)
+	    tween:Play()
+	end
+	
+	button.MouseEnter:Connect(function()
+	    tweenColor(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+	    tweenColor(originalColor)
+	end)
+	
+	
+end
+coroutine.wrap(IPQN_fake_script)()
+local function GDBP_fake_script() -- IncreasePlayerHitbox.ButtonHoverEffect 
+	local script = Instance.new('LocalScript', IncreasePlayerHitbox)
+
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	
+	local originalColor = button.BackgroundColor3
+	local hoverColor = Color3.fromRGB(128, 128, 128)  -- Grey color
+	
+	local function tweenColor(targetColor)
+	    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	    local goal = {BackgroundColor3 = targetColor}
+	    local tween = TweenService:Create(button, tweenInfo, goal)
+	    tween:Play()
+	end
+	
+	button.MouseEnter:Connect(function()
+	    tweenColor(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+	    tweenColor(originalColor)
+	end)
+	
+	
+end
+coroutine.wrap(GDBP_fake_script)()
+local function DBVFF_fake_script() -- IncreasePlayerHitbox.LocalScript 
+	local script = Instance.new('LocalScript', IncreasePlayerHitbox)
+
+	local Players = game:GetService("Players")
+	
+	local function increaseHitBox(character, size)
+		for _, part in character:GetChildren() do
+			if part:IsA("BasePart") then
+				part.Size = Vector3.new(size, size, size)  -- Set the size of each part to the specified size
+				part.Massless = true  -- Make the part massless to avoid physics issues
+			end
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local inputBox = script.Parent.Parent:FindFirstChild("Input")
+		if inputBox and tonumber(inputBox.Text) then
+			local newSize = tonumber(inputBox.Text)
+			for _, player in Players:GetPlayers() do
+				if player ~= Players.LocalPlayer and player.Character then
+					increaseHitBox(player.Character, newSize)
+				end
+			end
+		else
+			warn("Invalid input for hitbox size")
+		end
+	end)
+	
+end
+coroutine.wrap(DBVFF_fake_script)()
+local function ZMXXFN_fake_script() -- PlayerTPWalkspeed.ButtonHoverEffect 
+	local script = Instance.new('LocalScript', PlayerTPWalkspeed)
+
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	
+	local originalColor = button.BackgroundColor3
+	local hoverColor = Color3.fromRGB(128, 128, 128)  -- Grey color
+	
+	local function tweenColor(targetColor)
+	    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	    local goal = {BackgroundColor3 = targetColor}
+	    local tween = TweenService:Create(button, tweenInfo, goal)
+	    tween:Play()
+	end
+	
+	button.MouseEnter:Connect(function()
+	    tweenColor(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+	    tweenColor(originalColor)
+	end)
+	
+	
+end
+coroutine.wrap(ZMXXFN_fake_script)()
+local function BSGKSTP_fake_script() -- PlayerTPWalkspeed.TPWalkScript 
+	local script = Instance.new('LocalScript', PlayerTPWalkspeed)
+
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local root = character:WaitForChild("HumanoidRootPart")
+	
+	local button = script.Parent
+	local inputBox = button.Parent:WaitForChild("Input")
+	
+	local isTpWalking = false
+	local tpWalkSpeed = 0
+	
+	local function tpWalk()
+	    if isTpWalking and humanoid and root then
+	        local moveDirection = humanoid.MoveDirection
+	        if moveDirection.Magnitude > 0 then
+	            local newPosition = root.Position + moveDirection * tpWalkSpeed
+	            root.CFrame = CFrame.new(newPosition, newPosition + root.CFrame.LookVector)
+	        end
+	    end
+	end
+	
+	local function toggleTpWalk()
+	    isTpWalking = not isTpWalking
+	    if isTpWalking then
+	        tpWalkSpeed = tonumber(inputBox.Text) or 1
+	        button.Text = "Disable TPWalk"
+	        RunService:BindToRenderStep("TPWalk", Enum.RenderPriority.Character.Value, tpWalk)
+	    else
+	        button.Text = "Enable TPWalk"
+	        RunService:UnbindFromRenderStep("TPWalk")
+	    end
+	end
+	
+	button.MouseButton1Click:Connect(toggleTpWalk)
+	
+	local function onCharacterAdded(newCharacter)
+	    character = newCharacter
+	    humanoid = character:WaitForChild("Humanoid")
+	    root = character:WaitForChild("HumanoidRootPart")
+	    
+	    if isTpWalking then
+	        RunService:UnbindFromRenderStep("TPWalk")
+	        RunService:BindToRenderStep("TPWalk", Enum.RenderPriority.Character.Value, tpWalk)
+	    end
+	end
+	
+	player.CharacterAdded:Connect(onCharacterAdded)
+	
+	inputBox:GetPropertyChangedSignal("Text"):Connect(function()
+	    if isTpWalking then
+	        tpWalkSpeed = tonumber(inputBox.Text) or 1
+	    end
+	end)
+	
+	
+end
+coroutine.wrap(BSGKSTP_fake_script)()
+local function VGJWYPC_fake_script() -- Frame.DraggableGUI 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(VGJWYPC_fake_script)()
