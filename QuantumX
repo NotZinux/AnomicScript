@@ -13,14 +13,17 @@
 
 
 
- ___      ___ _______   ________  ________  ___  ________  ________                 _______     ________                       
-|\  \    /  /|\  ___ \ |\   __  \|\   ____\|\  \|\   __  \|\   ___  \  ___         /  ___  \   |\_____  \                      
-\ \  \  /  / | \   __/|\ \  \|\  \ \  \___|\ \  \ \  \|\  \ \  \\ \  \|\__\       /__/|_/  /|  \|____|\ /_                     
- \ \  \/  / / \ \  \_|/_\ \   _  _\ \_____  \ \  \ \  \\\  \ \  \\ \  \|__|       |__|//  / /        \|\  \                    
-  \ \    / /   \ \  \_|\ \ \  \\  \\|____|\  \ \  \ \  \\\  \ \  \\ \  \  ___         /  /_/__  ___ __\_\  \                   
-   \ \__/ /     \ \_______\ \__\\ _\ ____\_\  \ \__\ \_______\ \__\\ \__\|\__\       |\________\\__\\_______\                  
-    \|__|/       \|_______|\|__|\|__|\_________\|__|\|_______|\|__| \|__|\|__|        \|_______\|__\|_______|                  
-                                    \|_________|                                                                               
+ ___      ___ _______   ________  ________  ___  ________  ________                 _______      ___   ___          ________   _______   ___       __   ___       
+|\  \    /  /|\  ___ \ |\   __  \|\   ____\|\  \|\   __  \|\   ___  \  ___         /  ___  \    |\  \ |\  \        |\   ___  \|\  ___ \ |\  \     |\  \|\  \      
+\ \  \  /  / | \   __/|\ \  \|\  \ \  \___|\ \  \ \  \|\  \ \  \\ \  \|\__\       /__/|_/  /|   \ \  \\_\  \       \ \  \\ \  \ \   __/|\ \  \    \ \  \ \  \     
+ \ \  \/  / / \ \  \_|/_\ \   _  _\ \_____  \ \  \ \  \\\  \ \  \\ \  \|__|       |__|//  / /    \ \______  \       \ \  \\ \  \ \  \_|/_\ \  \  __\ \  \ \  \    
+  \ \    / /   \ \  \_|\ \ \  \\  \\|____|\  \ \  \ \  \\\  \ \  \\ \  \  ___         /  /_/__  __\|_____|\  \       \ \  \\ \  \ \  \_|\ \ \  \|\__\_\  \ \__\   
+   \ \__/ /     \ \_______\ \__\\ _\ ____\_\  \ \__\ \_______\ \__\\ \__\|\__\       |\________\\__\     \ \__\       \ \__\\ \__\ \_______\ \____________\|__|   
+    \|__|/       \|_______|\|__|\|__|\_________\|__|\|_______|\|__| \|__|\|__|        \|_______\|__|      \|__|        \|__| \|__|\|_______|\|____________|   ___ 
+                                    \|_________|                                                                                                             |\__\
+                                                                                                                                                             \|__|
+                                                                                                                                                                                   
+                                                                                                                 
                                                                                                                                
                                                                                                                                
     ___    ___       ___      ___ ________  ________  _____ ______   ___  ___       ___       ___  ________  _____ ______      
@@ -47,6 +50,11 @@
 
 --]]
 
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local AnomicScript = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
@@ -70,14 +78,19 @@ local Input = Instance.new("TextBox")
 local Local_Player_Configuration = Instance.new("Frame")
 local Frame_7 = Instance.new("Frame")
 local TextLabel_5 = Instance.new("TextLabel")
-local PlayerTPWalkspeed = Instance.new("TextButton")
+local Toggle_Noclip = Instance.new("TextButton")
 local Input_2 = Instance.new("TextBox")
+local PlayerTPWalkspeed = Instance.new("TextButton")
+local Configuration = Instance.new("Frame")
+local Frame_8 = Instance.new("Frame")
 local TextLabel_6 = Instance.new("TextLabel")
+local DestoryStoppingParts = Instance.new("TextButton")
 local TextLabel_7 = Instance.new("TextLabel")
 local TextLabel_8 = Instance.new("TextLabel")
 local TextLabel_9 = Instance.new("TextLabel")
 local TextLabel_10 = Instance.new("TextLabel")
 local TextLabel_11 = Instance.new("TextLabel")
+local TextLabel_12 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -89,7 +102,7 @@ Frame.Parent = AnomicScript
 Frame.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.246052638, 0, 0.291322321, 0)
+Frame.Position = UDim2.new(0.150254294, 0, 0.307885468, 0)
 Frame.Size = UDim2.new(0, 469, 0, 25)
 
 Frame_2.Parent = Frame
@@ -126,6 +139,8 @@ ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(7.03170002e-08, 0, -0.00543478271, 0)
 ScrollingFrame.Size = UDim2.new(0, 434, 0, 185)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 367)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
 
 SpawnFrame.Name = "SpawnFrame"
 SpawnFrame.Parent = ScrollingFrame
@@ -226,7 +241,7 @@ Player_Configure.Parent = ScrollingFrame
 Player_Configure.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
 Player_Configure.BackgroundTransparency = 0.500
 Player_Configure.BorderColor3 = Color3.fromRGB(200, 200, 200)
-Player_Configure.Position = UDim2.new(0.0184331797, 0, 0.496641248, 0)
+Player_Configure.Position = UDim2.new(0.0184331797, 0, 0.348007947, 0)
 Player_Configure.Size = UDim2.new(0, 162, 0, 146)
 
 Frame_6.Parent = Player_Configure
@@ -281,8 +296,8 @@ Local_Player_Configuration.Parent = ScrollingFrame
 Local_Player_Configuration.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
 Local_Player_Configuration.BackgroundTransparency = 0.500
 Local_Player_Configuration.BorderColor3 = Color3.fromRGB(200, 200, 200)
-Local_Player_Configuration.Position = UDim2.new(0.405529946, 0, 0.494759381, 0)
-Local_Player_Configuration.Size = UDim2.new(0, 162, 0, 146)
+Local_Player_Configuration.Position = UDim2.new(0.407999992, 0, 0.349000007, 0)
+Local_Player_Configuration.Size = UDim2.new(0, 162, 0, 154)
 
 Frame_7.Parent = Local_Player_Configuration
 Frame_7.BackgroundColor3 = Color3.fromRGB(200, 192, 183)
@@ -296,7 +311,6 @@ TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.BackgroundTransparency = 1.000
 TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0, 0, 0.0833333358, 0)
 TextLabel_5.Size = UDim2.new(0, 162, 0, 12)
 TextLabel_5.Font = Enum.Font.SourceSans
 TextLabel_5.Text = "LocalPlayer's Configuration"
@@ -304,19 +318,18 @@ TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_5.TextSize = 14.000
 TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
 
-PlayerTPWalkspeed.Name = "Player TPWalkspeed"
-PlayerTPWalkspeed.Parent = Frame_7
-PlayerTPWalkspeed.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-PlayerTPWalkspeed.BackgroundTransparency = 0.600
-PlayerTPWalkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PlayerTPWalkspeed.BorderSizePixel = 0
-PlayerTPWalkspeed.Position = UDim2.new(0.0671115443, 0, 1.55866492, 0)
-PlayerTPWalkspeed.Size = UDim2.new(0, 136, 0, 26)
-PlayerTPWalkspeed.Modal = true
-PlayerTPWalkspeed.Font = Enum.Font.SourceSans
-PlayerTPWalkspeed.Text = "Player TPWalkspeed"
-PlayerTPWalkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
-PlayerTPWalkspeed.TextSize = 14.000
+Toggle_Noclip.Name = "Toggle_Noclip"
+Toggle_Noclip.Parent = Frame_7
+Toggle_Noclip.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Toggle_Noclip.BackgroundTransparency = 0.600
+Toggle_Noclip.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_Noclip.BorderSizePixel = 0
+Toggle_Noclip.Position = UDim2.new(0.0617283955, 0, 6.5, 0)
+Toggle_Noclip.Size = UDim2.new(0, 136, 0, 31)
+Toggle_Noclip.Font = Enum.Font.SourceSans
+Toggle_Noclip.Text = "Toggle Noclip"
+Toggle_Noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle_Noclip.TextSize = 14.000
 
 Input_2.Name = "Input"
 Input_2.Parent = Frame_7
@@ -332,57 +345,98 @@ Input_2.Text = ""
 Input_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Input_2.TextSize = 14.000
 
-TextLabel_6.Parent = Frame
+PlayerTPWalkspeed.Name = "Player TPWalkspeed"
+PlayerTPWalkspeed.Parent = Frame_7
+PlayerTPWalkspeed.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+PlayerTPWalkspeed.BackgroundTransparency = 0.600
+PlayerTPWalkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerTPWalkspeed.BorderSizePixel = 0
+PlayerTPWalkspeed.Position = UDim2.new(0.0671115443, 0, 1.55866492, 0)
+PlayerTPWalkspeed.Size = UDim2.new(0, 136, 0, 26)
+PlayerTPWalkspeed.Modal = true
+PlayerTPWalkspeed.Font = Enum.Font.SourceSans
+PlayerTPWalkspeed.Text = "Player TPWalkspeed"
+PlayerTPWalkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerTPWalkspeed.TextSize = 14.000
+
+Configuration.Name = "Configuration"
+Configuration.Parent = ScrollingFrame
+Configuration.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+Configuration.BackgroundTransparency = 0.500
+Configuration.BorderColor3 = Color3.fromRGB(200, 200, 200)
+Configuration.Position = UDim2.new(0.0162949096, 0, 0.653463662, 0)
+Configuration.Size = UDim2.new(0, 413, 0, 154)
+
+Frame_8.Parent = Configuration
+Frame_8.BackgroundColor3 = Color3.fromRGB(200, 192, 183)
+Frame_8.BackgroundTransparency = 0.300
+Frame_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_8.BorderSizePixel = 0
+Frame_8.Size = UDim2.new(0, 162, 0, 12)
+
+TextLabel_6.Parent = Frame_8
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.BackgroundTransparency = 1.000
 TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Size = UDim2.new(0, 125, 0, 24)
+TextLabel_6.Position = UDim2.new(0, 0, 0.0833333358, 0)
+TextLabel_6.Size = UDim2.new(0, 162, 0, 12)
 TextLabel_6.Font = Enum.Font.SourceSans
-TextLabel_6.Text = "Quantum X | Anomic Script"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.TextScaled = true
-TextLabel_6.TextSize = 18.000
-TextLabel_6.TextWrapped = true
+TextLabel_6.Text = "Configuration"
+TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+
+DestoryStoppingParts.Name = "Destory StoppingParts"
+DestoryStoppingParts.Parent = Frame_8
+DestoryStoppingParts.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+DestoryStoppingParts.BackgroundTransparency = 0.600
+DestoryStoppingParts.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DestoryStoppingParts.BorderSizePixel = 0
+DestoryStoppingParts.Position = UDim2.new(0.0308641978, 0, 1.75, 0)
+DestoryStoppingParts.Size = UDim2.new(0, 142, 0, 23)
+DestoryStoppingParts.Font = Enum.Font.SourceSans
+DestoryStoppingParts.Text = "Destory StoppingParts"
+DestoryStoppingParts.TextColor3 = Color3.fromRGB(255, 255, 255)
+DestoryStoppingParts.TextSize = 14.000
 
 TextLabel_7.Parent = Frame
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.BackgroundTransparency = 1.000
 TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_7.BorderSizePixel = 0
-TextLabel_7.Position = UDim2.new(0.733475506, 0, 0.0399999991, 0)
 TextLabel_7.Size = UDim2.new(0, 125, 0, 24)
 TextLabel_7.Font = Enum.Font.SourceSans
-TextLabel_7.Text = "v2.3"
+TextLabel_7.Text = "Quantum X | Anomic Script"
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextScaled = true
 TextLabel_7.TextSize = 18.000
 TextLabel_7.TextWrapped = true
-TextLabel_7.TextXAlignment = Enum.TextXAlignment.Right
 
 TextLabel_8.Parent = Frame
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
 TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_8.BorderSizePixel = 0
-TextLabel_8.Position = UDim2.new(0.0362473354, 0, 1.36000001, 0)
+TextLabel_8.Position = UDim2.new(0.724946678, 0, 0.0399999991, 0)
 TextLabel_8.Size = UDim2.new(0, 125, 0, 24)
 TextLabel_8.Font = Enum.Font.SourceSans
-TextLabel_8.Text = "Made by: Zinux"
+TextLabel_8.Text = "v2.4"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextScaled = true
 TextLabel_8.TextSize = 18.000
 TextLabel_8.TextWrapped = true
+TextLabel_8.TextXAlignment = Enum.TextXAlignment.Right
 
 TextLabel_9.Parent = Frame
 TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.BackgroundTransparency = 1.000
 TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_9.BorderSizePixel = 0
-TextLabel_9.Position = UDim2.new(0.351812422, 0, 1.36000001, 0)
-TextLabel_9.Size = UDim2.new(0, 78, 0, 24)
+TextLabel_9.Position = UDim2.new(0.0362473354, 0, 1.36000001, 0)
+TextLabel_9.Size = UDim2.new(0, 125, 0, 24)
 TextLabel_9.Font = Enum.Font.SourceSans
-TextLabel_9.Text = "V3RMILLION Account: Zinux"
+TextLabel_9.Text = "Made by: Zinux"
 TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.TextScaled = true
 TextLabel_9.TextSize = 18.000
@@ -393,10 +447,10 @@ TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.BackgroundTransparency = 1.000
 TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_10.BorderSizePixel = 0
-TextLabel_10.Position = UDim2.new(0.550106704, 0, 1.36000001, 0)
-TextLabel_10.Size = UDim2.new(0, 69, 0, 24)
+TextLabel_10.Position = UDim2.new(0.351812422, 0, 1.36000001, 0)
+TextLabel_10.Size = UDim2.new(0, 78, 0, 24)
 TextLabel_10.Font = Enum.Font.SourceSans
-TextLabel_10.Text = "ElitePVPERS Account:NotZinux"
+TextLabel_10.Text = "V3RMILLION Account: Zinux"
 TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.TextScaled = true
 TextLabel_10.TextSize = 18.000
@@ -407,18 +461,32 @@ TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_11.BackgroundTransparency = 1.000
 TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_11.BorderSizePixel = 0
-TextLabel_11.Position = UDim2.new(0.733475566, 0, 1.36000001, 0)
+TextLabel_11.Position = UDim2.new(0.550106704, 0, 1.36000001, 0)
 TextLabel_11.Size = UDim2.new(0, 69, 0, 24)
 TextLabel_11.Font = Enum.Font.SourceSans
-TextLabel_11.Text = "UnknownCheats Account:NotZinux"
+TextLabel_11.Text = "ElitePVPERS Account:NotZinux"
 TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_11.TextScaled = true
 TextLabel_11.TextSize = 18.000
 TextLabel_11.TextWrapped = true
 
+TextLabel_12.Parent = Frame
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_12.BorderSizePixel = 0
+TextLabel_12.Position = UDim2.new(0.733475566, 0, 1.36000001, 0)
+TextLabel_12.Size = UDim2.new(0, 69, 0, 24)
+TextLabel_12.Font = Enum.Font.SourceSans
+TextLabel_12.Text = "UnknownCheats Account:NotZinux"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 18.000
+TextLabel_12.TextWrapped = true
+
 -- Scripts:
 
-local function DLEFPVQ_fake_script() -- GoToSpawnLocation.ButtonHoverEffect 
+local function WPIW_fake_script() -- GoToSpawnLocation.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', GoToSpawnLocation)
 
 	local TweenService = game:GetService("TweenService")
@@ -444,8 +512,8 @@ local function DLEFPVQ_fake_script() -- GoToSpawnLocation.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(DLEFPVQ_fake_script)()
-local function UTIBETH_fake_script() -- GoToSpawnLocation.LocalScript 
+coroutine.wrap(WPIW_fake_script)()
+local function EVHG_fake_script() -- GoToSpawnLocation.LocalScript 
 	local script = Instance.new('LocalScript', GoToSpawnLocation)
 
 	local Players = game:GetService("Players")
@@ -472,8 +540,8 @@ local function UTIBETH_fake_script() -- GoToSpawnLocation.LocalScript
 	script.Parent.MouseButton1Click:Connect(TPTOSPAWN)
 	
 end
-coroutine.wrap(UTIBETH_fake_script)()
-local function XTYOCVG_fake_script() -- GunEsp.ButtonHoverEffect 
+coroutine.wrap(EVHG_fake_script)()
+local function CKOLND_fake_script() -- GunEsp.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', GunEsp)
 
 	local TweenService = game:GetService("TweenService")
@@ -499,8 +567,8 @@ local function XTYOCVG_fake_script() -- GunEsp.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(XTYOCVG_fake_script)()
-local function QIXUPG_fake_script() -- GunEsp.Script 
+coroutine.wrap(CKOLND_fake_script)()
+local function PWJJC_fake_script() -- GunEsp.Script 
 	local script = Instance.new('Script', GunEsp)
 
 	
@@ -567,8 +635,8 @@ local function QIXUPG_fake_script() -- GunEsp.Script
 	end)
 	
 end
-coroutine.wrap(QIXUPG_fake_script)()
-local function ODAYC_fake_script() -- PrinterEsp.Script 
+coroutine.wrap(PWJJC_fake_script)()
+local function LWBC_fake_script() -- PrinterEsp.Script 
 	local script = Instance.new('Script', PrinterEsp)
 
 	
@@ -616,8 +684,8 @@ local function ODAYC_fake_script() -- PrinterEsp.Script
 	end)
 	
 end
-coroutine.wrap(ODAYC_fake_script)()
-local function IPQN_fake_script() -- PrinterEsp.ButtonHoverEffect 
+coroutine.wrap(LWBC_fake_script)()
+local function VTRYQ_fake_script() -- PrinterEsp.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', PrinterEsp)
 
 	local TweenService = game:GetService("TweenService")
@@ -643,8 +711,8 @@ local function IPQN_fake_script() -- PrinterEsp.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(IPQN_fake_script)()
-local function GDBP_fake_script() -- IncreasePlayerHitbox.ButtonHoverEffect 
+coroutine.wrap(VTRYQ_fake_script)()
+local function ZELU_fake_script() -- IncreasePlayerHitbox.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', IncreasePlayerHitbox)
 
 	local TweenService = game:GetService("TweenService")
@@ -670,8 +738,8 @@ local function GDBP_fake_script() -- IncreasePlayerHitbox.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(GDBP_fake_script)()
-local function DBVFF_fake_script() -- IncreasePlayerHitbox.LocalScript 
+coroutine.wrap(ZELU_fake_script)()
+local function KZPTEY_fake_script() -- IncreasePlayerHitbox.LocalScript 
 	local script = Instance.new('LocalScript', IncreasePlayerHitbox)
 
 	local Players = game:GetService("Players")
@@ -700,8 +768,88 @@ local function DBVFF_fake_script() -- IncreasePlayerHitbox.LocalScript
 	end)
 	
 end
-coroutine.wrap(DBVFF_fake_script)()
-local function ZMXXFN_fake_script() -- PlayerTPWalkspeed.ButtonHoverEffect 
+coroutine.wrap(KZPTEY_fake_script)()
+local function UOHNZWN_fake_script() -- Toggle_Noclip.ButtonHoverEffect 
+	local script = Instance.new('LocalScript', Toggle_Noclip)
+
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	
+	local originalColor = button.BackgroundColor3
+	local hoverColor = Color3.fromRGB(128, 128, 128)  -- Grey color
+	
+	local function tweenColor(targetColor)
+	    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	    local goal = {BackgroundColor3 = targetColor}
+	    local tween = TweenService:Create(button, tweenInfo, goal)
+	    tween:Play()
+	end
+	
+	button.MouseEnter:Connect(function()
+	    tweenColor(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+	    tweenColor(originalColor)
+	end)
+	
+	
+end
+coroutine.wrap(UOHNZWN_fake_script)()
+local function CMWFDX_fake_script() -- Toggle_Noclip.NoclipToggle 
+	local script = Instance.new('LocalScript', Toggle_Noclip)
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local button = script.Parent
+	local noclipEnabled = false
+	local connection
+	
+	local function setNoclip(character)
+		for _, part in character:GetChildren() do
+			if part:IsA("BasePart") then
+				part.CanCollide = not noclipEnabled
+			end
+		end
+	end
+	
+	local function toggleNoclip()
+		noclipEnabled = not noclipEnabled
+		button.Text = noclipEnabled and "Disable Noclip" or "Enable Noclip"
+	
+		if noclipEnabled then
+			connection = RunService.Stepped:Connect(function()
+				if player.Character then
+					setNoclip(player.Character)
+				end
+			end)
+		else
+			if connection then
+				connection:Disconnect()
+			end
+			-- Wait for a short delay before disabling Noclip
+			task.wait(0.1)
+			if player.Character then
+				setNoclip(player.Character)
+			end
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleNoclip)
+	
+	player.CharacterAdded:Connect(function(character)
+		if noclipEnabled then
+			setNoclip(character)
+			-- Wait for a short delay before enabling Noclip
+			task.wait(0.1)
+		end
+	end)
+	
+end
+coroutine.wrap(CMWFDX_fake_script)()
+local function LMIBDNU_fake_script() -- PlayerTPWalkspeed.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', PlayerTPWalkspeed)
 
 	local TweenService = game:GetService("TweenService")
@@ -727,8 +875,8 @@ local function ZMXXFN_fake_script() -- PlayerTPWalkspeed.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(ZMXXFN_fake_script)()
-local function BSGKSTP_fake_script() -- PlayerTPWalkspeed.TPWalkScript 
+coroutine.wrap(LMIBDNU_fake_script)()
+local function KCEAH_fake_script() -- PlayerTPWalkspeed.TPWalkScript 
 	local script = Instance.new('LocalScript', PlayerTPWalkspeed)
 
 	local Players = game:GetService("Players")
@@ -791,8 +939,20 @@ local function BSGKSTP_fake_script() -- PlayerTPWalkspeed.TPWalkScript
 	
 	
 end
-coroutine.wrap(BSGKSTP_fake_script)()
-local function VGJWYPC_fake_script() -- Frame.DraggableGUI 
+coroutine.wrap(KCEAH_fake_script)()
+local function RBOR_fake_script() -- DestoryStoppingParts.Script 
+	local script = Instance.new('Script', DestoryStoppingParts)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+			if v.Name == "StoppingPart" then
+				v:Destroy()
+			end
+		end
+	end)
+end
+coroutine.wrap(RBOR_fake_script)()
+local function SDEYZ_fake_script() -- Frame.DraggableGUI 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -830,4 +990,5 @@ local function VGJWYPC_fake_script() -- Frame.DraggableGUI
 		end
 	end)
 end
-coroutine.wrap(VGJWYPC_fake_script)()
+coroutine.wrap(SDEYZ_fake_script)()
+
