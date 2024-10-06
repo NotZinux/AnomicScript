@@ -48,8 +48,6 @@
 
 
 
---]]
-
 -- Gui to Lua
 -- Version: 3.2
 
@@ -81,16 +79,30 @@ local TextLabel_5 = Instance.new("TextLabel")
 local Toggle_Noclip = Instance.new("TextButton")
 local Input_2 = Instance.new("TextBox")
 local PlayerTPWalkspeed = Instance.new("TextButton")
+local TpToUi = Instance.new("TextButton")
 local Configuration = Instance.new("Frame")
 local Frame_8 = Instance.new("Frame")
 local TextLabel_6 = Instance.new("TextLabel")
 local DestoryStoppingParts = Instance.new("TextButton")
+local TpTool = Instance.new("TextButton")
 local TextLabel_7 = Instance.new("TextLabel")
 local TextLabel_8 = Instance.new("TextLabel")
 local TextLabel_9 = Instance.new("TextLabel")
 local TextLabel_10 = Instance.new("TextLabel")
 local TextLabel_11 = Instance.new("TextLabel")
 local TextLabel_12 = Instance.new("TextLabel")
+local TpFrame = Instance.new("Frame")
+local TextLabel_13 = Instance.new("TextLabel")
+local MainFrame = Instance.new("Frame")
+local TeleportInput = Instance.new("TextBox")
+local TeleportButton = Instance.new("TextButton")
+local TweenTeleportInput = Instance.new("TextBox")
+local TweenTeleportButton = Instance.new("TextButton")
+local TextLabel_14 = Instance.new("TextLabel")
+local ImageButton = Instance.new("ImageButton")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel_15 = Instance.new("TextLabel")
+local TextLabel_16 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -104,6 +116,7 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.150254294, 0, 0.307885468, 0)
 Frame.Size = UDim2.new(0, 469, 0, 25)
+Frame.Visible = false
 
 Frame_2.Parent = Frame
 Frame_2.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
@@ -139,7 +152,6 @@ ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(7.03170002e-08, 0, -0.00543478271, 0)
 ScrollingFrame.Size = UDim2.new(0, 434, 0, 185)
-ScrollingFrame.CanvasPosition = Vector2.new(0, 367)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
 
 SpawnFrame.Name = "SpawnFrame"
@@ -359,6 +371,19 @@ PlayerTPWalkspeed.Text = "Player TPWalkspeed"
 PlayerTPWalkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
 PlayerTPWalkspeed.TextSize = 14.000
 
+TpToUi.Name = "TpTo Ui"
+TpToUi.Parent = Frame_7
+TpToUi.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+TpToUi.BackgroundTransparency = 0.600
+TpToUi.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TpToUi.BorderSizePixel = 0
+TpToUi.Position = UDim2.new(0.055555556, 0, 9.5, 0)
+TpToUi.Size = UDim2.new(0, 136, 0, 31)
+TpToUi.Font = Enum.Font.SourceSans
+TpToUi.Text = "TpTo Ui"
+TpToUi.TextColor3 = Color3.fromRGB(255, 255, 255)
+TpToUi.TextSize = 14.000
+
 Configuration.Name = "Configuration"
 Configuration.Parent = ScrollingFrame
 Configuration.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
@@ -372,7 +397,7 @@ Frame_8.BackgroundColor3 = Color3.fromRGB(200, 192, 183)
 Frame_8.BackgroundTransparency = 0.300
 Frame_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame_8.BorderSizePixel = 0
-Frame_8.Size = UDim2.new(0, 162, 0, 12)
+Frame_8.Size = UDim2.new(0, 413, 0, 12)
 
 TextLabel_6.Parent = Frame_8
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -380,7 +405,7 @@ TextLabel_6.BackgroundTransparency = 1.000
 TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_6.BorderSizePixel = 0
 TextLabel_6.Position = UDim2.new(0, 0, 0.0833333358, 0)
-TextLabel_6.Size = UDim2.new(0, 162, 0, 12)
+TextLabel_6.Size = UDim2.new(0, 117, 0, 12)
 TextLabel_6.Font = Enum.Font.SourceSans
 TextLabel_6.Text = "Configuration"
 TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -393,12 +418,25 @@ DestoryStoppingParts.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 DestoryStoppingParts.BackgroundTransparency = 0.600
 DestoryStoppingParts.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DestoryStoppingParts.BorderSizePixel = 0
-DestoryStoppingParts.Position = UDim2.new(0.0308641978, 0, 1.75, 0)
+DestoryStoppingParts.Position = UDim2.new(0.0114937471, 0, 1.66666663, 0)
 DestoryStoppingParts.Size = UDim2.new(0, 142, 0, 23)
 DestoryStoppingParts.Font = Enum.Font.SourceSans
 DestoryStoppingParts.Text = "Destory StoppingParts"
 DestoryStoppingParts.TextColor3 = Color3.fromRGB(255, 255, 255)
 DestoryStoppingParts.TextSize = 14.000
+
+TpTool.Name = "TpTool"
+TpTool.Parent = Frame_8
+TpTool.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+TpTool.BackgroundTransparency = 0.600
+TpTool.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TpTool.BorderSizePixel = 0
+TpTool.Position = UDim2.new(0.374689877, 0, 1.66666663, 0)
+TpTool.Size = UDim2.new(0, 142, 0, 23)
+TpTool.Font = Enum.Font.SourceSans
+TpTool.Text = "TpTool"
+TpTool.TextColor3 = Color3.fromRGB(255, 255, 255)
+TpTool.TextSize = 14.000
 
 TextLabel_7.Parent = Frame
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -407,7 +445,7 @@ TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_7.BorderSizePixel = 0
 TextLabel_7.Size = UDim2.new(0, 125, 0, 24)
 TextLabel_7.Font = Enum.Font.SourceSans
-TextLabel_7.Text = "Quantum X | Anomic Script"
+TextLabel_7.Text = "Pseudonym-Z | Anomic Script"
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextScaled = true
 TextLabel_7.TextSize = 18.000
@@ -421,7 +459,7 @@ TextLabel_8.BorderSizePixel = 0
 TextLabel_8.Position = UDim2.new(0.724946678, 0, 0.0399999991, 0)
 TextLabel_8.Size = UDim2.new(0, 125, 0, 24)
 TextLabel_8.Font = Enum.Font.SourceSans
-TextLabel_8.Text = "v2.4"
+TextLabel_8.Text = "v2.5"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextScaled = true
 TextLabel_8.TextSize = 18.000
@@ -484,9 +522,146 @@ TextLabel_12.TextScaled = true
 TextLabel_12.TextSize = 18.000
 TextLabel_12.TextWrapped = true
 
+TpFrame.Name = "TpFrame"
+TpFrame.Parent = Frame
+TpFrame.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
+TpFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TpFrame.BorderSizePixel = 0
+TpFrame.Position = UDim2.new(1.02800989, 0, -0.072328493, 0)
+TpFrame.Size = UDim2.new(0, 204, 0, 23)
+TpFrame.Visible = false
+
+TextLabel_13.Parent = TpFrame
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_13.BorderSizePixel = 0
+TextLabel_13.Position = UDim2.new(0.117647059, 0, 0.0869565234, 0)
+TextLabel_13.Size = UDim2.new(0, 58, 0, 21)
+TextLabel_13.Font = Enum.Font.SourceSans
+TextLabel_13.Text = "TpTo Ui"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextSize = 14.000
+TextLabel_13.TextXAlignment = Enum.TextXAlignment.Left
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = TpFrame
+MainFrame.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0, 0, 0.892272294, 0)
+MainFrame.Size = UDim2.new(0, 204, 0, 281)
+
+TeleportInput.Name = "TeleportInput"
+TeleportInput.Parent = MainFrame
+TeleportInput.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+TeleportInput.BorderColor3 = Color3.fromRGB(220, 220, 220)
+TeleportInput.Position = UDim2.new(0.0784313753, 0, 0.0960854068, 0)
+TeleportInput.Size = UDim2.new(0, 172, 0, 42)
+TeleportInput.Font = Enum.Font.SourceSans
+TeleportInput.PlaceholderText = "User:"
+TeleportInput.Text = ""
+TeleportInput.TextColor3 = Color3.fromRGB(225, 225, 225)
+TeleportInput.TextScaled = true
+TeleportInput.TextSize = 14.000
+TeleportInput.TextWrapped = true
+
+TeleportButton.Name = "TeleportButton"
+TeleportButton.Parent = TeleportInput
+TeleportButton.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+TeleportButton.BorderColor3 = Color3.fromRGB(226, 226, 226)
+TeleportButton.Position = UDim2.new(0.0493625365, 0, 1.2036947, 0)
+TeleportButton.Size = UDim2.new(0, 155, 0, 30)
+TeleportButton.Font = Enum.Font.SourceSans
+TeleportButton.Text = "Teleport To User"
+TeleportButton.TextColor3 = Color3.fromRGB(220, 220, 220)
+TeleportButton.TextSize = 14.000
+
+TweenTeleportInput.Name = "TweenTeleportInput"
+TweenTeleportInput.Parent = MainFrame
+TweenTeleportInput.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+TweenTeleportInput.BorderColor3 = Color3.fromRGB(220, 220, 220)
+TweenTeleportInput.Position = UDim2.new(0.0735294148, 0, 0.480427057, 0)
+TweenTeleportInput.Size = UDim2.new(0, 172, 0, 42)
+TweenTeleportInput.Font = Enum.Font.SourceSans
+TweenTeleportInput.PlaceholderText = "User:"
+TweenTeleportInput.Text = ""
+TweenTeleportInput.TextColor3 = Color3.fromRGB(225, 225, 225)
+TweenTeleportInput.TextScaled = true
+TweenTeleportInput.TextSize = 14.000
+TweenTeleportInput.TextWrapped = true
+
+TweenTeleportButton.Name = "TweenTeleportButton"
+TweenTeleportButton.Parent = TweenTeleportInput
+TweenTeleportButton.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+TweenTeleportButton.BorderColor3 = Color3.fromRGB(226, 226, 226)
+TweenTeleportButton.Position = UDim2.new(0.0493625365, 0, 1.2036947, 0)
+TweenTeleportButton.Size = UDim2.new(0, 155, 0, 30)
+TweenTeleportButton.Font = Enum.Font.SourceSans
+TweenTeleportButton.Text = "TweenTp To User"
+TweenTeleportButton.TextColor3 = Color3.fromRGB(220, 220, 220)
+TweenTeleportButton.TextSize = 14.000
+
+TextLabel_14.Parent = TpFrame
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_14.BorderSizePixel = 0
+TextLabel_14.Position = UDim2.new(0.538336635, 0, 0.0869565234, 0)
+TextLabel_14.Size = UDim2.new(0, 94, 0, 21)
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = "V.1"
+TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.TextSize = 14.000
+TextLabel_14.TextXAlignment = Enum.TextXAlignment.Right
+
+ImageButton.Parent = TpFrame
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0, 0, 6.35782897e-07, 0)
+ImageButton.Size = UDim2.new(0, 26, 0, 24)
+ImageButton.Image = "rbxassetid://16884178261"
+ImageButton.ImageRectOffset = Vector2.new(208, 494)
+ImageButton.ImageRectSize = Vector2.new(16, 16)
+
+ImageLabel.Parent = AnomicScript
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.414417595, 0, 0.303144693, 0)
+ImageLabel.Size = UDim2.new(0, 231, 0, 232)
+ImageLabel.Image = "rbxassetid://121448709775332"
+
+TextLabel_15.Parent = ImageLabel
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_15.BorderSizePixel = 0
+TextLabel_15.Position = UDim2.new(-0.36796537, 0, -0.112068966, 0)
+TextLabel_15.Size = UDim2.new(0, 400, 0, 50)
+TextLabel_15.Font = Enum.Font.Fantasy
+TextLabel_15.Text = "Developed by"
+TextLabel_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_15.TextSize = 37.000
+
+TextLabel_16.Parent = ImageLabel
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_16.BorderSizePixel = 0
+TextLabel_16.Position = UDim2.new(-0.36796537, 0, 0.857758641, 0)
+TextLabel_16.Size = UDim2.new(0, 400, 0, 50)
+TextLabel_16.Font = Enum.Font.Fantasy
+TextLabel_16.Text = "Pseudonym-Z"
+TextLabel_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_16.TextSize = 37.000
+
 -- Scripts:
 
-local function WPIW_fake_script() -- GoToSpawnLocation.ButtonHoverEffect 
+local function ECRXU_fake_script() -- GoToSpawnLocation.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', GoToSpawnLocation)
 
 	local TweenService = game:GetService("TweenService")
@@ -512,8 +687,8 @@ local function WPIW_fake_script() -- GoToSpawnLocation.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(WPIW_fake_script)()
-local function EVHG_fake_script() -- GoToSpawnLocation.LocalScript 
+coroutine.wrap(ECRXU_fake_script)()
+local function PDPNCJD_fake_script() -- GoToSpawnLocation.LocalScript 
 	local script = Instance.new('LocalScript', GoToSpawnLocation)
 
 	local Players = game:GetService("Players")
@@ -540,8 +715,8 @@ local function EVHG_fake_script() -- GoToSpawnLocation.LocalScript
 	script.Parent.MouseButton1Click:Connect(TPTOSPAWN)
 	
 end
-coroutine.wrap(EVHG_fake_script)()
-local function CKOLND_fake_script() -- GunEsp.ButtonHoverEffect 
+coroutine.wrap(PDPNCJD_fake_script)()
+local function FSMDR_fake_script() -- GunEsp.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', GunEsp)
 
 	local TweenService = game:GetService("TweenService")
@@ -567,8 +742,8 @@ local function CKOLND_fake_script() -- GunEsp.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(CKOLND_fake_script)()
-local function PWJJC_fake_script() -- GunEsp.Script 
+coroutine.wrap(FSMDR_fake_script)()
+local function SZIUYT_fake_script() -- GunEsp.Script 
 	local script = Instance.new('Script', GunEsp)
 
 	
@@ -587,7 +762,8 @@ local function PWJJC_fake_script() -- GunEsp.Script
 	    billboardGui.Name = "ToolModelDisplay"
 	    billboardGui.Size = UDim2.new(0, 100, 0, 40)
 	    billboardGui.StudsOffset = Vector3.new(0, 3, 0)
-	    billboardGui.Adornee = model
+		billboardGui.Adornee = model
+		billboardGui.AlwaysOnTop = true
 		if billboardGui.Enabled == false then
 			while true do
 			billboardGui.Enabled = true
@@ -635,8 +811,8 @@ local function PWJJC_fake_script() -- GunEsp.Script
 	end)
 	
 end
-coroutine.wrap(PWJJC_fake_script)()
-local function LWBC_fake_script() -- PrinterEsp.Script 
+coroutine.wrap(SZIUYT_fake_script)()
+local function HBJLW_fake_script() -- PrinterEsp.Script 
 	local script = Instance.new('Script', PrinterEsp)
 
 	
@@ -684,8 +860,8 @@ local function LWBC_fake_script() -- PrinterEsp.Script
 	end)
 	
 end
-coroutine.wrap(LWBC_fake_script)()
-local function VTRYQ_fake_script() -- PrinterEsp.ButtonHoverEffect 
+coroutine.wrap(HBJLW_fake_script)()
+local function MEJZIZQ_fake_script() -- PrinterEsp.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', PrinterEsp)
 
 	local TweenService = game:GetService("TweenService")
@@ -711,8 +887,8 @@ local function VTRYQ_fake_script() -- PrinterEsp.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(VTRYQ_fake_script)()
-local function ZELU_fake_script() -- IncreasePlayerHitbox.ButtonHoverEffect 
+coroutine.wrap(MEJZIZQ_fake_script)()
+local function RQOVSOS_fake_script() -- IncreasePlayerHitbox.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', IncreasePlayerHitbox)
 
 	local TweenService = game:GetService("TweenService")
@@ -738,8 +914,8 @@ local function ZELU_fake_script() -- IncreasePlayerHitbox.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(ZELU_fake_script)()
-local function KZPTEY_fake_script() -- IncreasePlayerHitbox.LocalScript 
+coroutine.wrap(RQOVSOS_fake_script)()
+local function ORGFEFK_fake_script() -- IncreasePlayerHitbox.LocalScript 
 	local script = Instance.new('LocalScript', IncreasePlayerHitbox)
 
 	local Players = game:GetService("Players")
@@ -768,8 +944,8 @@ local function KZPTEY_fake_script() -- IncreasePlayerHitbox.LocalScript
 	end)
 	
 end
-coroutine.wrap(KZPTEY_fake_script)()
-local function UOHNZWN_fake_script() -- Toggle_Noclip.ButtonHoverEffect 
+coroutine.wrap(ORGFEFK_fake_script)()
+local function YVMJULD_fake_script() -- Toggle_Noclip.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', Toggle_Noclip)
 
 	local TweenService = game:GetService("TweenService")
@@ -795,8 +971,8 @@ local function UOHNZWN_fake_script() -- Toggle_Noclip.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(UOHNZWN_fake_script)()
-local function CMWFDX_fake_script() -- Toggle_Noclip.NoclipToggle 
+coroutine.wrap(YVMJULD_fake_script)()
+local function AJHION_fake_script() -- Toggle_Noclip.NoclipToggle 
 	local script = Instance.new('LocalScript', Toggle_Noclip)
 
 	local Players = game:GetService("Players")
@@ -848,8 +1024,8 @@ local function CMWFDX_fake_script() -- Toggle_Noclip.NoclipToggle
 	end)
 	
 end
-coroutine.wrap(CMWFDX_fake_script)()
-local function LMIBDNU_fake_script() -- PlayerTPWalkspeed.ButtonHoverEffect 
+coroutine.wrap(AJHION_fake_script)()
+local function JPCT_fake_script() -- PlayerTPWalkspeed.ButtonHoverEffect 
 	local script = Instance.new('LocalScript', PlayerTPWalkspeed)
 
 	local TweenService = game:GetService("TweenService")
@@ -875,8 +1051,8 @@ local function LMIBDNU_fake_script() -- PlayerTPWalkspeed.ButtonHoverEffect
 	
 	
 end
-coroutine.wrap(LMIBDNU_fake_script)()
-local function KCEAH_fake_script() -- PlayerTPWalkspeed.TPWalkScript 
+coroutine.wrap(JPCT_fake_script)()
+local function AZYQMCM_fake_script() -- PlayerTPWalkspeed.TPWalkScript 
 	local script = Instance.new('LocalScript', PlayerTPWalkspeed)
 
 	local Players = game:GetService("Players")
@@ -939,8 +1115,51 @@ local function KCEAH_fake_script() -- PlayerTPWalkspeed.TPWalkScript
 	
 	
 end
-coroutine.wrap(KCEAH_fake_script)()
-local function RBOR_fake_script() -- DestoryStoppingParts.Script 
+coroutine.wrap(AZYQMCM_fake_script)()
+local function YDSALQE_fake_script() -- TpToUi.ButtonHoverEffect 
+	local script = Instance.new('LocalScript', TpToUi)
+
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	
+	local originalColor = button.BackgroundColor3
+	local hoverColor = Color3.fromRGB(128, 128, 128)  -- Grey color
+	
+	local function tweenColor(targetColor)
+	    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	    local goal = {BackgroundColor3 = targetColor}
+	    local tween = TweenService:Create(button, tweenInfo, goal)
+	    tween:Play()
+	end
+	
+	button.MouseEnter:Connect(function()
+	    tweenColor(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+	    tweenColor(originalColor)
+	end)
+	
+	
+end
+coroutine.wrap(YDSALQE_fake_script)()
+local function OETP_fake_script() -- TpToUi.NoclipToggle 
+	local script = Instance.new('LocalScript', TpToUi)
+
+	local Tpframe = script.Parent.Parent.Parent.Parent.Parent.Parent.TpFrame
+	
+	local function Toggle()
+		if Tpframe.Visible == false then
+			Tpframe.Visible = true
+		else
+			Tpframe.Visible = false
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(Toggle)
+end
+coroutine.wrap(OETP_fake_script)()
+local function KRCMH_fake_script() -- DestoryStoppingParts.Script 
 	local script = Instance.new('Script', DestoryStoppingParts)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -951,8 +1170,45 @@ local function RBOR_fake_script() -- DestoryStoppingParts.Script
 		end
 	end)
 end
-coroutine.wrap(RBOR_fake_script)()
-local function SDEYZ_fake_script() -- Frame.DraggableGUI 
+coroutine.wrap(KRCMH_fake_script)()
+local function CGBQ_fake_script() -- TpTool.GiveTpTool 
+	local script = Instance.new('LocalScript', TpTool)
+
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	
+	local function createTeleportTool()
+		local tool = Instance.new("Tool")
+		tool.Name = "Teleport2"
+		tool.RequiresHandle = false
+	
+		tool.Activated:Connect(function()
+			local player = Players.LocalPlayer
+			local mouse = player:GetMouse()
+			local targetPosition = mouse.Hit.p
+	
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+			end
+		end)
+	
+		return tool
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = Players.LocalPlayer
+		if player.Backpack:FindFirstChild("Teleport") then
+			player.Backpack.Teleport:Destroy()
+		end
+	
+		local teleportTool = createTeleportTool()
+		teleportTool.Parent = player.Backpack
+	end)
+	
+	
+end
+coroutine.wrap(CGBQ_fake_script)()
+local function AMNE_fake_script() -- Frame.DraggableGUI 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -990,5 +1246,205 @@ local function SDEYZ_fake_script() -- Frame.DraggableGUI
 		end
 	end)
 end
-coroutine.wrap(SDEYZ_fake_script)()
+coroutine.wrap(AMNE_fake_script)()
+local function SFAV_fake_script() -- TeleportButton.TeleportButtonHandler 
+	local script = Instance.new('LocalScript', TeleportButton)
+
+	local Players = game:GetService("Players")
+	
+	local teleportButton = script.Parent
+	local teleportInput = teleportButton.Parent
+	
+	teleportButton.MouseButton1Click:Connect(function()
+		local targetUsername = teleportInput.Text
+		local targetPlayer = Players:FindFirstChild(targetUsername)
+	
+		if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+			local player = Players.LocalPlayer
+			if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				player.Character.HumanoidRootPart.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame
+			end
+		else
+			warn("Target player not found or not valid.")
+		end
+	end)
+	
+end
+coroutine.wrap(SFAV_fake_script)()
+local function KLEGSKM_fake_script() -- TweenTeleportButton.LocalScript 
+	local script = Instance.new('LocalScript', TweenTeleportButton)
+
+	local Players = game:GetService("Players")
+		local TweenService = game:GetService("TweenService")
+	
+	local teleportButton = script.Parent
+	local teleportInput = teleportButton.Parent
+	
+	teleportButton.MouseButton1Click:Connect(function()
+		local targetUsername = teleportInput.Text
+		local targetPlayer = Players:FindFirstChild(targetUsername)
+	
+		if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+			local player = Players.LocalPlayer
+			if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				            local targetCFrame = targetPlayer.Character.HumanoidRootPart.CFrame
+				            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+				            local tween = TweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = targetCFrame})
+				           tween:Play()
+			end
+		else
+			warn("Target player not found or not valid.")
+		end
+	end)
+	
+end
+coroutine.wrap(KLEGSKM_fake_script)()
+local function UFWC_fake_script() -- TpFrame.DraggableGUI 
+	local script = Instance.new('LocalScript', TpFrame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(UFWC_fake_script)()
+local function DFFPYT_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local button = script.Parent
+	local function nextimage()
+		if	button.ImageRectOffset == Vector2.new(208, 494) then
+			button.ImageRectOffset = Vector2.new(494, 170)
+		else
+			button.ImageRectOffset = Vector2.new(208, 494)
+	end
+		
+	end
+	
+	script.Parent.MouseButton1Click:Connect(nextimage)
+end
+coroutine.wrap(DFFPYT_fake_script)()
+local function YRSBS_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local MainFrame = script.Parent.Parent.MainFrame
+	
+	local function toggle()
+		if 	MainFrame.Visible == true then
+			MainFrame.Visible = false
+		else
+			MainFrame.Visible = true
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(toggle)
+end
+coroutine.wrap(YRSBS_fake_script)()
+local function DBXZG_fake_script() -- TextLabel_15.ImageLabelFadeOut 
+	local script = Instance.new('LocalScript', TextLabel_15)
+
+	local imageLabel = script.Parent
+	
+	local function fadeOut()
+	    wait(3)  -- Wait for 3 seconds before starting the fade-out
+	    for i = 0, 1, 0.1 do
+			imageLabel.TextTransparency = i
+	        wait(0.1)
+	    end
+	end
+	
+	imageLabel.Visible = true
+	fadeOut()
+	
+	
+end
+coroutine.wrap(DBXZG_fake_script)()
+local function PHJR_fake_script() -- TextLabel_16.ImageLabelFadeOut 
+	local script = Instance.new('LocalScript', TextLabel_16)
+
+	local imageLabel = script.Parent
+	
+	local function fadeOut()
+	    wait(3)  -- Wait for 3 seconds before starting the fade-out
+	    for i = 0, 1, 0.1 do
+			imageLabel.TextTransparency = i
+	        wait(0.1)
+	    end
+	end
+	
+	imageLabel.Visible = true
+	fadeOut()
+	
+	
+end
+coroutine.wrap(PHJR_fake_script)()
+local function DQFCC_fake_script() -- ImageLabel.ImageLabelFadeOut 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local imageLabel = script.Parent
+	
+	local function fadeOut()
+	    wait(3)  -- Wait for 3 seconds before starting the fade-out
+	    for i = 0, 1, 0.1 do
+	        imageLabel.ImageTransparency = i
+	        wait(0.1)
+	    end
+	end
+	
+	imageLabel.Visible = true
+	fadeOut()
+	
+	
+end
+coroutine.wrap(DQFCC_fake_script)()
+local function NNFEAB_fake_script() -- ImageLabel.Script 
+	local script = Instance.new('Script', ImageLabel)
+
+	if script.Parent.Visible == true then
+		local blur = Instance.new("BlurEffect")
+		blur.Parent = game:GetService("Lighting")
+		blur.Size = 24  -- Initial blur size
+		task.wait(2)
+	
+		for i = 24, 0, -0.5 do
+			blur.Size = i
+			task.wait(0.1)  -- Adjust the wait time for smooth transition
+		end
+		blur:Destroy()-- Clean up the blur effect after the transition
+		script.Parent.Parent.Frame.Visible = true
+	end
+	
+	
+end
+coroutine.wrap(NNFEAB_fake_script)()
 
